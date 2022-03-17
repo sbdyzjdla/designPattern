@@ -12,7 +12,7 @@ public interface ShipFactory {
     //default 메소드나 private 메소드로 정의하지 않았기 때문에 반드시 하위클래스에서 정의해야함
     Ship createShip();
 
-    //인터페이스 내에서만 사용가능한 메서드
+    //인터페이스 내에서만 사용가능한 메서드 (자바8에서 불가능)
     private void validate(String name, String email) {
         if (name == null || name.isBlank()) {
             throw new IllegalArgumentException("배 이름을 지어주세요.");
